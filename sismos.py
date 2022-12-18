@@ -7,7 +7,7 @@ import pandas as pd
 import os
 #import seaborn as sns
 #import matplotlib.pyplot as plt
-import chart_studio.plotly as py
+#import chart_studio.plotly as py
 #import plotly.offline as pyo
 import plotly.express as px
 #import plotly.graph_objects as go
