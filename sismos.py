@@ -3,7 +3,7 @@ from datetime import datetime
 
 import numpy as np
 import pandas as pd
-import geopandas as gpd
+#import geopandas as gpd
 import os
 import seaborn as sns
 import matplotlib.pyplot as plt
