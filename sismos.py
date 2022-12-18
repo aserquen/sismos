@@ -6,11 +6,11 @@ import pandas as pd
 #import geopandas as gpd
 import os
 #import seaborn as sns
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import chart_studio.plotly as py
-import plotly.offline as pyo
+#import plotly.offline as pyo
 import plotly.express as px
-import plotly.graph_objects as go
+#import plotly.graph_objects as go
 
 st.title('Sismos registrados en el Perú 1960 - 2021')
 st.write("Grupo 1")
