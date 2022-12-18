@@ -9,7 +9,7 @@ import os
 #import matplotlib.pyplot as plt
 #import chart_studio.plotly as py
 #import plotly.offline as pyo
-import plotly.express as px
+#import plotly.express as px
 #import plotly.graph_objects as go
 
 st.title('Sismos registrados en el Perú 1960 - 2021')
