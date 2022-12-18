@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 import os
 #import plotly.express as px
+$ pip install openpyxl
 
 st.title('Sismos registrados en el Perú 1960 - 2021')
 st.write("Grupo 1")
