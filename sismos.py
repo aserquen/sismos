@@ -5,12 +5,7 @@ import numpy as np
 import pandas as pd
 #import geopandas as gpd
 import os
-#import seaborn as sns
-#import matplotlib.pyplot as plt
-#import chart_studio.plotly as py
-#import plotly.offline as pyo
-import plotly.express as px
-#import plotly.graph_objects as go
+#import plotly.express as px
 
 st.title('Sismos registrados en el Perú 1960 - 2021')
 st.write("Grupo 1")
@@ -63,19 +58,19 @@ df.shape, df.head()
 #Obteniendo la cantidad total de sismos por año
 dftotal = df.groupby(['FECHA_UTC']).count()['ID'].reset_index(name='Total')
 st.subheader("Cantidad de Sismos registrados cada año (1960 - 2021)")
-fig = px.scatter(
-    dftotal,
-    x="FECHA_UTC",
-    y="Total",
-    color="Total",
-    color_continuous_scale="reds",
-)
+#fig = px.scatter(
+#    dftotal,
+#    x="FECHA_UTC",
+#    y="Total",
+#    color="Total",
+#    color_continuous_scale="reds",
+#)
 
-tab1, tab2 = st.tabs(["Tema Streamlit (default)", "Plotly native theme"])
-with tab1:
-    st.plotly_chart(fig, theme="streamlit", use_conatiner_width=True)
-with tab2:
-    st.plotly_chart(fig, theme=None, use_conatiner_width=True)
+#tab1, tab2 = st.tabs(["Tema Streamlit (default)", "Plotly native theme"])
+#with tab1:
+ #   st.plotly_chart(fig, theme="streamlit", use_conatiner_width=True)
+#with tab2:
+ #   st.plotly_chart(fig, theme=None, use_conatiner_width=True)
 
 st.subheader('Sismos de magnitud mayor a 5 en el Perú (2017 - 2021)')
 df2 = df[df['MAGNITUD'] > 5]
