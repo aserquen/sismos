@@ -3,7 +3,6 @@ from datetime import datetime
 
 import numpy as np
 import pandas as pd
-#import geopandas as gpd
 import os
 #import plotly.express as px
 
@@ -19,17 +18,14 @@ st.write("* Pedro Ancajima Arrospide")
 
 st.write("Fuente: https://www.datosabiertos.gob.pe/sites/default/files/Catalogo1960_2021.xlsx")
 # Ruta de la Data de Movimientos sismicos
-url = "https://www.datosabiertos.gob.pe/sites/default/files/Catalogo1960_2021.xlsx"
-#url = "Catalogo1960_2021.xlsx"
+#url = "https://www.datosabiertos.gob.pe/sites/default/files/Catalogo1960_2021.xlsx"
+url = "Catalogo1960_2021.xlsx"
 #url = "https://github.com/aserquen/sismos/blob/main/Catalogo1960_2021.xlsx"
 #Importar datos de Temblores
 df = pd.read_excel(url)
 st.subheader('Explorando el conjunto de datos del Catalogo Sismico')
 df.shape, df.head()
 
-#df = gpd.GeoDataFrame(
-#    df, geometry=gpd.points_from_xy(df.LONGITUD, df.LATITUD))
-#df.info()
 df.FECHA_UTC = df.FECHA_UTC.astype('string').str[:4].astype('int64') #Convertir año de string a tipo numerico
 df['UBICACION'] = df.LATITUD.astype('string').str.cat(df.LONGITUD.astype('string'), sep=',')
 
