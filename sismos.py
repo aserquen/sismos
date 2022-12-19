@@ -24,7 +24,7 @@ url = "Catalogo1960_2021.xlsx"
 #Importar datos de Temblores
 df = pd.read_excel(url)
 st.subheader('Explorando el conjunto de datos del Catalogo Sismico')
-num = st.slider("num", 1,50, step=1) # -----
+num = st.slider("MOSTRAR FILAS", 1,50, step=1) # -----
 df.shape, df.head(num)
 
 df.FECHA_UTC = df.FECHA_UTC.astype('string').str[:4].astype('int64') #Convertir año de string a tipo numerico
@@ -71,7 +71,7 @@ with tab2:
 
 
 st.subheader('Sismos en el Perú (2017 - 2021)')
-magnitud = st.slider("De Magnitud magnitud >= ", 3,7, step=1) #
+magnitud = st.slider("De Magnitud >= ", 3,7, step=1) #
 df2 = df[df['MAGNITUD'] >= magnitud]
 df2 = df2[df2['FECHA_UTC'] >= 2017]
 dfLatLon = df2[['LATITUD','LONGITUD']]
