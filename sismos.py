@@ -72,8 +72,8 @@ with tab2:
 
 
 magnitud = st.slider("magnitud", 4,7, step=1) #
-st.subheader('Sismos de magnitud mayor a %d en el Perú (2017 - 2021)', magnitud)
-df2 = df[df['MAGNITUD'] > maginitud]
+st.subheader('Sismos de magnitud mayor en el Perú (2017 - 2021)')
+df2 = df[df['MAGNITUD'] > magnitud]
 df2 = df2[df2['FECHA_UTC'] >= 2017]
 dfLatLon = df2[['LATITUD','LONGITUD']]
 dfLatLon.columns= ['LAT','LON']
