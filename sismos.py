@@ -74,3 +74,19 @@ df2 = df2[df2['FECHA_UTC'] >= 2017]
 dfLatLon = df2[['LATITUD','LONGITUD']]
 dfLatLon.columns= ['LAT','LON']
 st.map(dfLatLon)
+
+st.subheader("Cantidad de Sismos registrados según su magnitud en el intervalo 1960-2021")
+df_csis = df.groupby('MAGNITUD_CAT2').agg({'FECHA_CORTE':'count'})
+df_csis.reset_index(inplace=True)
+df_csis.columns = ['RANGO MAGNITUD','CANTIDAD SISMOS']
+
+yaxis=['3-4   ','4-5   ','5-6   ','6-7   ','7-8   ']
+fig2 = px.bar(df_csis,x='CANTIDAD SISMOS',y=yaxis,text='CANTIDAD SISMOS')
+fig2.update_yaxes(title="Rango magnitud de sismos (ML)")
+fig2.update_xaxes(title="Cantidad de sismos",showticklabels=False)
+
+tab1, tab2 = st.tabs(["Tema Streamlit (default)", "Plotly native theme"])
+with tab1:
+    st.plotly_chart(fig2, theme="streamlit", use_conatiner_width=True)
+with tab2:
+    st.plotly_chart(fig2, theme=None, use_conatiner_width=True)
