@@ -70,10 +70,11 @@ with tab2:
     st.plotly_chart(fig, theme=None, use_conatiner_width=True)
 
 
-st.subheader('Sismos en el Perú (2017 - 2021)')
-magnitud = st.slider("MAGNITUD: ", 3,7, step=1) #
-df2 = df[df['MAGNITUD'] == magnitud]
-df2 = df2[df2['FECHA_UTC'] >= 2017]
+st.subheader('Sismos en el Perú (2010 - 2021)')
+magnitud = st.slider("MAGNITUD MAYOR O IGUAL A: ", 3,7, step=1) #
+year = st.slider("AÑO MAYOR O IGUAL A ", 3,7, step=1) #
+df2 = df[df['MAGNITUD'] >= magnitud]
+df2 = df2[df2['FECHA_UTC'] >= year]
 dfLatLon = df2[['LATITUD','LONGITUD']]
 dfLatLon.columns= ['LAT','LON']
 st.map(dfLatLon)
