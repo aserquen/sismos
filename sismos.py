@@ -24,7 +24,8 @@ url = "Catalogo1960_2021.xlsx"
 #Importar datos de Temblores
 df = pd.read_excel(url)
 st.subheader('Explorando el conjunto de datos del Catalogo Sismico')
-df.shape, df.head()
+num = st.slider("num", 1,50, step=1) # -----
+df.shape, df.head(num)
 
 df.FECHA_UTC = df.FECHA_UTC.astype('string').str[:4].astype('int64') #Convertir año de string a tipo numerico
 df['UBICACION'] = df.LATITUD.astype('string').str.cat(df.LONGITUD.astype('string'), sep=',')
