@@ -18,9 +18,9 @@ st.write("* Pedro Ancajima Arrospide")
 st.write("Fuente: https://www.datosabiertos.gob.pe/sites/default/files/Catalogo1960_2021.xlsx")
 # Ruta de la Data de Movimientos sismicos
 
-url = "https://www.datosabiertos.gob.pe/sites/default/files/Catalogo1960_2021.xlsx"
-#url = "Catalogo1960_2021.xlsx"
+#url = "https://www.datosabiertos.gob.pe/sites/default/files/Catalogo1960_2021.xlsx"
 #url = "https://github.com/aserquen/sismos/blob/main/Catalogo1960_2021.xlsx"
+url = "Catalogo1960_2021.xlsx"
 #Importar datos de Temblores
 df = pd.read_excel(url)
 st.subheader('Explorando el conjunto de datos del Catalogo Sismico')
