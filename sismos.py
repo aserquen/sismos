@@ -11,9 +11,9 @@ st.write("Tema : CATALOGO SISMICO 1960-2021 (IGP)")
 st.write("Integrantes:")
 st.write("* Marin Zúñiga, Antony")
 st.write("* Serquén Yparraguirre, Oscar Alex")
-st.write("* Nestor Raul Cardenas Sanchez")
-st.write("* Victor Junior's Deza Quinteros")
-st.write("* Pedro Ancajima Arrospide")
+st.write("* Cardenas Sanchez, Nestor Raul")
+st.write("* Deza Quinteros, Victor Junior's")
+st.write("* Ancajima Arrospide, Pedro")
 
 st.write("Fuente: https://www.datosabiertos.gob.pe/sites/default/files/Catalogo1960_2021.xlsx")
 # Ruta de la Data de Movimientos sismicos
