@@ -5,6 +5,7 @@ import pandas as pd
 import os
 import plotly.express as px
 
+st.subheader('Python para Ciencia de Datos')
 st.title('Sismos registrados en el Perú 1960 - 2021')
 st.write("Grupo 1")
 st.write("Tema : CATALOGO SISMICO 1960-2021 (IGP)")
