@@ -94,4 +94,4 @@ tab1, tab2 = st.tabs(["Tema Streamlit (default)", "Plotly native theme"])
 with tab1:
     st.plotly_chart(fig2, theme="streamlit", use_container_width=True)
 with tab2:
-    st.plotly_chart(fig2, theme=None, use_conatiner_width=True)
+    st.plotly_chart(fig2, theme=None, use_container_width=True)
