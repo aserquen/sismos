@@ -66,9 +66,9 @@ fig = px.scatter(
 
 tab1, tab2 = st.tabs(["Tema Streamlit (default)", "Plotly native theme"])
 with tab1:
-    st.plotly_chart(fig, theme="streamlit", use_conatiner_width=True)
+    st.plotly_chart(fig, theme="streamlit", use_container_width=True)
 with tab2:
-    st.plotly_chart(fig, theme=None, use_conatiner_width=True)
+    st.plotly_chart(fig, theme=None, use_container_width=True)
 
 
 st.subheader('Sismos en el Perú (2010 - 2021)')
@@ -92,6 +92,6 @@ fig2.update_xaxes(title="Cantidad de sismos",showticklabels=False)
 
 tab1, tab2 = st.tabs(["Tema Streamlit (default)", "Plotly native theme"])
 with tab1:
-    st.plotly_chart(fig2, theme="streamlit", use_conatiner_width=True)
+    st.plotly_chart(fig2, theme="streamlit", use_container_width=True)
 with tab2:
     st.plotly_chart(fig2, theme=None, use_conatiner_width=True)
