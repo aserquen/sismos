@@ -7,7 +7,7 @@ st.title('Python para Ciencia de Datos')
 st.title('Sismos registrados en el Perú 1960 - 2021')
 st.write("**Tema:** CATALOGO SISMICO 1960-2021 (IGP)")
 st.write("**Integrantes:**")
-st.write("** Serquén Yparraguirre, Oscar Alex\n*)
+st.write("** Serquén Yparraguirre, Oscar Alex**")
 
 st.write("**Fuente:** [Datos Abiertos de Perú](https://www.datosabiertos.gob.pe/sites/default/files/Catalogo1960_2021.xlsx)")
 
